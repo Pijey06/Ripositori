@@ -33,7 +33,7 @@ function register (username, Password, ConfirmPassword) {
     //console.log(username, Password, ConfirmPassword)
 
     if(Password == ConfirmPassword && Password != "" && ConfirmPassword != ""){
-        consoele.log("Password match!")
+        console.log("Password match!")
     } else if(Password == "" || ConfirmPassword == ""){ 
         return console.log("password must not be empty.")
     }
