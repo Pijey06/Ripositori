@@ -1,4 +1,4 @@
-console.log("Hello World");
+//console.log("Hello World");
 
 //string -"Pijey", 'pogi',"23"
 //number - 24, 24.1, 1230e
@@ -11,16 +11,35 @@ console.log("Hello World");
             //["apple","banana","grape"]
 //undefined = null
 
-console.log("hello world", 123, true,["apple","banana","grape"])
-console.error("hello World");
+//console.log("hello world", 123, true,["apple","banana","grape"])
+//console.error("hello World");
 
 let txtUsername = document.querySelector("#txtUsername")
 let btnRegister = document.querySelector("#btnRegister")
+let txtConfirmPassword = document.querySelector("#txtConfirmPassword")
+let txtPassword = document.querySelector("#txtPassword")
 
 btnRegister.onclick = function() {
-    register(txtUsername.value)
+    register(txtUsername.value, txtPassword.value, txtConfirmPassword.value)
 }
 
-function register (username) {
-    console.log(username)
+function register (username, Password, ConfirmPassword) {
+    //console.log(username)
+    //if...else if...else
+    //Conditional Operators(Greater Than >, Less Than <, Equal ==, Not !,
+    //Greater Than or Equal >=, Less Than or Equal <=
+    //Not Equal !=
+
+    //console.log(username, Password, ConfirmPassword)
+
+    if(Password == ConfirmPassword && Password != "" && ConfirmPassword != ""){
+        consoele.log("Password match!")
+    } else if(Password == "" || ConfirmPassword == ""){ 
+        return console.log("password must not be empty.")
+    }
+     else {
+        return console.log("Password Does not match!")
+    }
+
 }
+
